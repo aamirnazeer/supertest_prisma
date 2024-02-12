@@ -31,8 +31,6 @@ describe('Server', () => {
     const response = await request(serverInstance)
       .post('/update')
       .send({ name: 'John KOKO', id: uuidv4() });
-
-    console.log(response);
     expect(response.status).not.toBe(200);
   });
 
